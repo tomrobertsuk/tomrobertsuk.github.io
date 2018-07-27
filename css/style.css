@@ -7219,7 +7219,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   top: 0; }
 
-@media (min-width: 40em) {
+@media (min-width: 576px) {
   .carousel-caption p {
     font-size: 1.25rem;
     line-height: 1.4;

@@ -62,7 +62,7 @@ $hr-margin-y: ($spacer * 3);
 	top: 0;
 }
 
-@media (min-width: 40em) {
+@include media-breakpoint-up(sm) {
 	.carousel-caption p {
 		font-size: 1.25rem;
 		line-height: 1.4;

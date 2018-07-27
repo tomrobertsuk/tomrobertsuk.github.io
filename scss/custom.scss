@@ -1,0 +1,167 @@
+/* Bootstrap Variables
+-------------------------------------------------- */
+
+$theme-colors: ( "primary": #2ecc71, "secondary": #00a4ff);
+$container-max-widths: ( xl: 1200px);
+$body-color: #5a5a5a;
+$input-btn-border-width: 2px;
+$navbar-padding-y: .8rem;
+$navbar-padding-x: 1.5rem;
+$navbar-nav-link-padding-x: 1rem;
+$navbar-dark-color: rgba(#fff, .7);
+$navbar-dark-hover-color: rgba(#fff, 1);
+$link-color: map-get($theme-colors, "secondary");
+$component-active-bg: map-get($theme-colors, "secondary");
+$spacer: 1.5rem;
+$hr-margin-y: ($spacer * 3);
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/open-iconic/font/css/open-iconic-bootstrap.scss";
+@import "../node_modules/ekko-lightbox/dist/ekko-lightbox";
+
+
+/* Navbar
+-------------------------------------------------- */
+
+.navbar-nav {
+	font-size: $font-size-lg;
+}
+
+.navbar-brand {
+	margin-right: 1rem;
+
+	img {
+		max-width: 150px;
+	}
+
+	@include media-breakpoint-up(sm) {
+		img {
+			max-width: none;
+		}
+	}
+}
+
+/* Carousel
+-------------------------------------------------- */
+
+.hero-carousel .carousel-caption {
+	bottom: 3rem;
+	z-index: 10;
+}
+
+.hero-carousel .carousel-item {
+	background-color: #000;
+	height: 35rem;
+}
+
+.hero-carousel .carousel-item>img {
+	height: 35rem;
+	left: 0;
+	min-width: 100%;
+	opacity: 0.75;
+	position: absolute;
+	top: 0;
+}
+
+@media (min-width: 40em) {
+	.carousel-caption p {
+		font-size: 1.25rem;
+		line-height: 1.4;
+		margin-bottom: 1.25rem;
+	}
+}
+
+/* Testimonials
+-------------------------------------------------- */
+
+.testimonial-carousel .carousel-control-prev-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.testimonial-carousel .carousel-control-next-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+/* Hero
+-------------------------------------------------- */
+
+.hero {
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	
+	& > .container > div {
+		min-height: ($spacer * 15);
+		position: relative;
+	}
+
+	&::before {
+		background: #000;
+		bottom: 0;
+		content: "";
+		left: 0;
+		opacity: .25;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+/* Video Hero
+-------------------------------------------------- */
+
+.video-hero {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+	overflow: hidden;
+	background-position: center center;
+	background-size: cover;
+}
+
+.video-hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.video-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .video-hero video {
+    display: none;
+  }
+}
+
+/* CTA
+-------------------------------------------------- */
+
+.cta {
+	margin-top: -3.5rem;
+	position: relative;
+	z-index: 10;
+}
